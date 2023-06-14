@@ -13,8 +13,10 @@ class Admin extends CI_Controller
     public function index()
     {
         $data['title'] = 'Dashboard';
-        $data['user'] = $this->db->get_where('user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->db->get_where('user', [
+            'email' =>
+            $this->session->userdata('email')
+        ])->row_array();
         $this->load->view('templates/header', $data);
         $this->load->view('templates/sidebar', $data);
         $this->load->view('templates/topbar', $data);
@@ -25,8 +27,10 @@ class Admin extends CI_Controller
     public function role()
     {
         $data['title'] = 'Role';
-        $data['user'] = $this->db->get_where('user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->db->get_where('user', [
+            'email' =>
+            $this->session->userdata('email')
+        ])->row_array();
 
         $data['role'] = $this->db->get('user_role')->result_array();
         $this->form_validation->set_rules('role', 'Role', 'required');
@@ -49,8 +53,10 @@ class Admin extends CI_Controller
     public function roleAccess($role_id)
     {
         $data['title'] = 'Role Access';
-        $data['user'] = $this->db->get_where('user', ['email' =>
-        $this->session->userdata('email')])->row_array();
+        $data['user'] = $this->db->get_where('user', [
+            'email' =>
+            $this->session->userdata('email')
+        ])->row_array();
 
         $data['role'] = $this->db->get_where('user_role', ['id' => $role_id])->row_array();
         $this->db->where('id !=', 1);
@@ -93,5 +99,12 @@ class Admin extends CI_Controller
             Congratulation Role Has Been Delete!
             </div>');
         redirect('admin/role');
+    }
+    public function editRole()
+    {
+        $data['user_role'] = $this->db->get_where('user_role', [
+            'id' =>
+            $this->session->userdata('id')
+        ])->row_array();
     }
 }
