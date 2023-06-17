@@ -2,12 +2,22 @@
 <div class="container-fluid">
 
     <!-- Page Heading -->
+ update_uas6
     <h1 class="h3 mb-4 text-gray-800"><?= $title ?></h1>
+
+    <h1 class="h3 mb-4 text-gray-800">
+        <?= $title ?>
+    </h1>
+ master
     <div class="row">
         <div class="col-lg-6">
             <?= $this->session->flashdata('message'); ?>
         </div>
     </div>
+ update_uas6
+
+
+ master
     <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
             <div class="col-md-4">
@@ -15,9 +25,15 @@
             </div>
             <div class="col-md-8">
                 <div class="card-body">
-                    <h5 class="card-title"><?= $user['name']; ?></h5>
-                    <p class="card-text"><?= $user['email']; ?></p>
-                    <p class="card-text"><small class="text-body-secondary">Member Since <?= date('d F Y', $user['date_created']); ?></small></p>
+                    <h5 class="card-title">
+                        <?= $user['name']; ?>
+                    </h5>
+                    <p class="card-text">
+                        <?= $user['email']; ?>
+                    </p>
+                    <p class="card-text"><small class="text-body-secondary">Member Since
+                            <?= date('d F Y', $user['date_created']); ?>
+                        </small></p>
                 </div>
             </div>
         </div>
