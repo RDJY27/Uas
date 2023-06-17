@@ -32,6 +32,8 @@ class Admin extends CI_Controller
             $this->session->userdata('email')
         ])->row_array();
 
+
+
         $data['role'] = $this->db->get('user_role')->result_array();
         $this->form_validation->set_rules('role', 'Role', 'required');
         if ($this->form_validation->run() == false) {
@@ -48,6 +50,8 @@ class Admin extends CI_Controller
             redirect('admin/role');
         }
     }
+
+
 
 
     public function roleAccess($role_id)

@@ -41,12 +41,18 @@
                                 <?= $r['role']; ?>
                             </td>
                             <td>
+ update_uas6
+                                <a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>" class="badge badge-warning">Access</a>
+
+                                <a href="<?= base_url() ?>admin/hapusrole/<?= $r['id'] ?>" class="badge badge-danger">Delete</a>
+
                                 <a href="<?= base_url('admin/roleaccess/') . $r['id']; ?>"
                                     class="badge badge-warning">Access</a>
                                 <a href="" class="btn btn-primary mb-3" data-toggle="modal"
                                     data-target="#exampleModalEdit">Edit Role</a>
                                 <a href="<?= base_url() ?>admin/hapusrole/<?= $r['id'] ?>"
                                     class="badge badge-danger">Delete</a>
+ master
                             </td>
 
                         </tr>
@@ -87,6 +93,8 @@
     </div>
 </div>
 
+ update_uas6
+
 </div>
 
 <div class="modal fade" id="exampleModalEdit" tabindex="-1" aria-labelledby="exampleModalEditLabel" aria-hidden="true">
@@ -109,4 +117,5 @@
             </form>
         </div>
     </div>
+ master
 </div>
