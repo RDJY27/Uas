@@ -11,8 +11,7 @@
 
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content" data-url="<?= base_url('pengguna') ?>">
-				<!-- load Topbar -->
-				<?php $this->load->view('partials/topbar.php') ?>
+				
 
 				<div class="container-fluid">
 				<div class="clearfix">
@@ -33,7 +32,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="kode_pengguna"><strong>Kode Pengguna</strong></label>
-											<input type="text" name="kode_pengguna" placeholder="Masukkan Kode Pengguna" autocomplete="off"  class="form-control" required value="PENGGUNA - <?= mt_rand(10, 99) ?>" maxlength="8" readonly>
+											<input type="text" name="kode_pengguna" placeholder="Masukkan Kode Pengguna" autocomplete="off"  class="form-control" required value="PGN - <?= mt_rand(10, 99) ?>" maxlength="8" readonly>
 										</div>
 										<div class="form-group col-md-6">
 											<label for="nama_pengguna"><strong>Nama Pengguna</strong></label>
@@ -43,7 +42,7 @@
 									<div class="form-row">
 										<div class="form-group col-md-6">
 											<label for="username_pengguna"><strong>Username</strong></label>
-											<input type="text" name="username_pengguna" placeholder="Masukkan Username" autocomplete="off"  class="form-control" required>
+											<input type="text" name="username_pengguna" placeholder="Masukkan Username" autocomplete="off"  class="form-control" required >
 										</div>
 										<div class="form-group col-md-6">
 											<label for="password_pengguna"><strong>Password</strong></label>
@@ -62,8 +61,7 @@
 				</div>
 				</div>
 			</div>
-			<!-- load footer -->
-			<?php $this->load->view('partials/footer.php') ?>
+
 		</div>
 	</div>
 	<?php $this->load->view('partials/js.php') ?>

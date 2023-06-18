@@ -3,7 +3,7 @@
 
 <div class="container">
     <div class="row gy-3">
-        <div class="col-lg-3 col-md-6 d-flex">
+        <div class="col-lg-3 col-md-1 d-flex">
             <i class="bi bi-geo-alt icon"></i>
             <div>
                 <h4>Address</h4>

@@ -1,6 +1,6 @@
 <?php
 
-use Dompdf\Dompdf;
+
 
 class Penjualan extends CI_Controller {
 	public function __construct(){
@@ -88,34 +88,5 @@ class Penjualan extends CI_Controller {
 
 	public function keranjang_barang(){
 		$this->load->view('penjualan/keranjang');
-	}
-
-	public function export(){
-		$dompdf = new Dompdf();
-		// $this->data['perusahaan'] = $this->m_usaha->lihat();
-		$this->data['all_penjualan'] = $this->m_penjualan->lihat();
-		$this->data['title'] = 'Laporan Data Penjualan';
-		$this->data['no'] = 1;
-
-		$dompdf->setPaper('A4', 'Landscape');
-		$html = $this->load->view('penjualan/report', $this->data, true);
-		$dompdf->load_html($html);
-		$dompdf->render();
-		$dompdf->stream('Laporan Data Penjualan Tanggal ' . date('d F Y'), array("Attachment" => false));
-	}
-
-	public function export_detail($no_penjualan){
-		$dompdf = new Dompdf();
-		// $this->data['perusahaan'] = $this->m_usaha->lihat();
-		$this->data['penjualan'] = $this->m_penjualan->lihat_no_penjualan($no_penjualan);
-		$this->data['all_detail_penjualan'] = $this->m_detail_penjualan->lihat_no_penjualan($no_penjualan);
-		$this->data['title'] = 'Laporan Detail Penjualan';
-		$this->data['no'] = 1;
-
-		$dompdf->setPaper('A4', 'Landscape');
-		$html = $this->load->view('penjualan/detail_report', $this->data, true);
-		$dompdf->load_html($html);
-		$dompdf->render();
-		$dompdf->stream('Laporan Detail Penjualan Tanggal ' . date('d F Y'), array("Attachment" => false));
 	}
 }

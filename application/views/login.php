@@ -17,7 +17,7 @@
 
 </head>
 
-<body class="bg-gradient-primary">
+<body style="background-image: url(assets/img/profile/bgLogin.jpg)">
 
 	<div class="container">
 
@@ -39,7 +39,7 @@
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
-									<?php elseif($this->session->flashdata('error')) : ?>
+									<?php elseif ($this->session->flashdata('error')) : ?>
 										<div class="alert alert-danger alert-dismissible fade show" role="alert">
 											<?= $this->session->flashdata('error') ?>
 											<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -48,7 +48,7 @@
 										</div>
 									<?php endif ?>
 									<div class="text-center">
-										<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+										<img src="assets/img/favicon.ico" alt="">
 									</div>
 									<form class="user" method="POST" action="<?= base_url('login/proses_login') ?>">
 										<div class="form-group">
@@ -60,7 +60,7 @@
 										<div class="form-group">
 											<select name="role" id="role" class="form-control" required>
 												<option value="">Masuk Sebagai</option>
-												<option value="pembeli">pembeli</option>
+												<option value="pembeli">Pelanggan</option>
 												<option value="admin">Admin</option>
 											</select>
 										</div>

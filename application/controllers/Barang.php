@@ -1,6 +1,5 @@
 <?php
 
-use Dompdf\Dompdf;
 
 class Barang extends CI_Controller{
 	public function __construct(){
@@ -104,17 +103,4 @@ class Barang extends CI_Controller{
 		}
 	}
 
-	public function export(){
-		$dompdf = new Dompdf();
-		// $this->data['perusahaan'] = $this->m_usaha->lihat();
-		$this->data['all_barang'] = $this->m_barang->lihat();
-		$this->data['title'] = 'Laporan Data Barang';
-		$this->data['no'] = 1;
-
-		$dompdf->setPaper('A4', 'Landscape');
-		$html = $this->load->view('barang/report', $this->data, true);
-		$dompdf->load_html($html);
-		$dompdf->render();
-		$dompdf->stream('Laporan Data Barang Tanggal ' . date('d F Y'), array("Attachment" => false));
-	}
 }

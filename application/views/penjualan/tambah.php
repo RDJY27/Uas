@@ -11,8 +11,7 @@
 
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content" data-url="<?= base_url('penjualan') ?>">
-				<!-- load Topbar -->
-				<?php $this->load->view('partials/topbar.php') ?>
+				
 
 				<div class="container-fluid">
 				<div class="clearfix">
@@ -113,7 +112,7 @@
 													<td>
 														<input type="hidden" name="total_hidden" value="">
 														<input type="hidden" name="max_hidden" value="">
-														<button type="submit" class="btn btn-primary"><i class="fa fa-save"></i>&nbsp;&nbsp;Simpan</button>
+														<button type="submit" class="btn btn-primary"><i class="fas fa-cart-plus"></i></i>&nbsp;&nbsp;Beli</button>
 													</td>
 												</tr>
 											</tfoot>
@@ -126,8 +125,7 @@
 				</div>
 				</div>
 			</div>
-			<!-- load footer -->
-			<?php $this->load->view('partials/footer.php') ?>
+
 		</div>
 	</div>
 	<?php $this->load->view('partials/js.php') ?>

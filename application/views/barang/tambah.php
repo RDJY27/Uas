@@ -11,8 +11,7 @@
 
 		<div id="content-wrapper" class="d-flex flex-column">
 			<div id="content" data-url="<?= base_url('barang') ?>">
-				<!-- load Topbar -->
-				<?php $this->load->view('partials/topbar.php') ?>
+
 
 				<div class="container-fluid">
 				<div class="clearfix">
@@ -80,8 +79,7 @@
 				</div>
 				</div>
 			</div>
-			<!-- load footer -->
-			<?php $this->load->view('partials/footer.php') ?>
+			
 		</div>
 	</div>
 	<?php $this->load->view('partials/js.php') ?>
