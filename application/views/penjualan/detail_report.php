@@ -22,9 +22,9 @@
 					<td><?= $penjualan->no_penjualan ?></td>
 				</tr>
 				<tr>
-					<td><strong>Nama Kasir</strong></td>
+					<td><strong>Nama pembeli</strong></td>
 					<td>:</td>
-					<td><?= $penjualan->nama_kasir ?></td>
+					<td><?= $penjualan->nama_pembeli ?></td>
 				</tr>
 				<tr>
 					<td><strong>Waktu Penjualan</strong></td>

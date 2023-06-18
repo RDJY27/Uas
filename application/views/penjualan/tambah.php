@@ -30,7 +30,7 @@
 							<div class="card-header"><strong>Isi Form Dibawah Ini!</strong></div>
 							<div class="card-body">
 								<form action="<?= base_url('penjualan/proses_tambah') ?>" id="form-tambah" method="POST">
-									<h5>Data Kasir</h5>
+									<h5>Data pembeli</h5>
 									<hr>
 									<div class="form-row">
 										<div class="form-group col-2">
@@ -38,12 +38,12 @@
 											<input type="text" name="no_penjualan" value="PJ<?= time() ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-3">
-											<label>Kode Kasir</label>
-											<input type="text" name="kode_kasir" value="<?= $this->session->login['kode'] ?>" readonly class="form-control">
+											<label>Kode pembeli</label>
+											<input type="text" name="kode_pembeli" value="<?= $this->session->login['kode'] ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-3">
-											<label>Nama Kasir</label>
-											<input type="text" name="nama_kasir" value="<?= $this->session->login['nama'] ?>" readonly class="form-control">
+											<label>Nama pembeli</label>
+											<input type="text" name="nama_pembeli" value="<?= $this->session->login['nama'] ?>" readonly class="form-control">
 										</div>
 										<div class="form-group col-2">
 											<label>Tanggal Penjualan</label>

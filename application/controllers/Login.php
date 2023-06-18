@@ -5,7 +5,7 @@ class Login extends CI_Controller{
 		parent::__construct();
 		date_default_timezone_set('Asia/Jakarta');
 		if($this->session->login) redirect('dashboard');
-		$this->load->model('M_kasir', 'm_kasir');
+		$this->load->model('M_pembeli', 'm_pembeli');
 		$this->load->model('M_pengguna', 'm_pengguna');
 	}
 
@@ -14,7 +14,7 @@ class Login extends CI_Controller{
 	}
 
 	public function proses_login(){
-		if($this->input->post('role') === 'kasir') $this->_proses_login_kasir($this->input->post('username'));
+		if($this->input->post('role') === 'pembeli') $this->_proses_login_pembeli($this->input->post('username'));
 		elseif($this->input->post('role') === 'admin') $this->_proses_login_admin($this->input->post('username'));
 		else {
 			?>
@@ -25,15 +25,15 @@ class Login extends CI_Controller{
 		}
 	}
 
-	protected function _proses_login_kasir($username){
-		$get_kasir = $this->m_kasir->lihat_username($username);
-		if($get_kasir){
-			if($get_kasir->password_kasir == $this->input->post('password')){
+	protected function _proses_login_pembeli($username){
+		$get_pembeli = $this->m_pembeli->lihat_username($username);
+		if($get_pembeli){
+			if($get_pembeli->password_pembeli == $this->input->post('password')){
 				$session = [
-					'kode' => $get_kasir->kode_kasir,
-					'nama' => $get_kasir->nama_kasir,
-					'username' => $get_kasir->username_kasir,
-					'password' => $get_kasir->password_kasir,
+					'kode' => $get_pembeli->kode_pembeli,
+					'nama' => $get_pembeli->nama_pembeli,
+					'username' => $get_pembeli->username_pembeli,
+					'password' => $get_pembeli->password_pembeli,
 					'role' => $this->input->post('role'),
 					'jam_masuk' => date('H:i:s')
 				];

@@ -10,7 +10,7 @@
 		<?php $this->load->view('partials/sidebar.php') ?>
 
 		<div id="content-wrapper" class="d-flex flex-column">
-			<div id="content" data-url="<?= base_url('kasir') ?>">
+			<div id="content" data-url="<?= base_url('pembeli') ?>">
 				<!-- load Topbar -->
 				<?php $this->load->view('partials/topbar.php') ?>
 
@@ -61,8 +61,8 @@
 		                <div class="card-body">
 		                  <div class="row no-gutters align-items-center">
 		                    <div class="col mr-2">
-		                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Jumlah Kasir</div>
-		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_kasir ?></div>
+		                      <div class="text-xs font-weight-bold text-success text-uppercase mb-1">Jumlah pembeli</div>
+		                      <div class="h5 mb-0 font-weight-bold text-gray-800"><?= $jumlah_pembeli ?></div>
 		                    </div>
 		                    <div class="col-auto">
 		                      <i class="fas fa-cash-register fa-2x text-gray-300"></i>
@@ -112,21 +112,7 @@
 		          </div>
 
 		        <div class="row">
-		          	<div class="col-md-6">
-						<div class="card shadow">
-							<div class="card-header"><strong>Profil Toko</strong></div>
-							<div class="card-body">
-								<strong>Nama Toko : </strong><br>
-								<input  type="text" value="<?= $toko->nama_toko ?>" readonly class="form-control mt-2 mb-2">
-								<strong>Nama Pemilik : </strong><br>
-								<input  type="text" value="<?= $toko->nama_pemilik ?>" readonly class="form-control mt-2 mb-2">
-								<strong>No Telepon : </strong><br>
-								<input  type="text" value="<?= $toko->no_telepon ?>" readonly class="form-control mt-2 mb-2">
-								<strong>Alamat : </strong><br>
-								<input  type="text" value="<?= $toko->alamat ?>" readonly class="form-control mt-2">
-							</div>				
-						</div>
-		          	</div>
+		      
 		          	<div class="col-md-6">
 						<div class="card shadow">
 							<div class="card-header"><strong>User Sedang Login</strong></div>

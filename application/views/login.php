@@ -60,7 +60,7 @@
 										<div class="form-group">
 											<select name="role" id="role" class="form-control" required>
 												<option value="">Masuk Sebagai</option>
-												<option value="kasir">Kasir</option>
+												<option value="pembeli">pembeli</option>
 												<option value="admin">Admin</option>
 											</select>
 										</div>

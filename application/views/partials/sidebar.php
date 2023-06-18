@@ -1,9 +1,9 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 			<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dashboard') ?>">
 				<div class="sidebar-brand-icon rotate-n-15">
-					<i class="fas fa-laugh-wink"></i>
+					
 				</div>
-				<div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+				<div class="sidebar-brand-text mx-3">Selamat Datang <sup></sup></div>
 			</a>
 			<hr class="sidebar-divider my-0">
 			<li class="nav-item <?= $aktif == 'dashboard' ? 'active' : '' ?>">
@@ -20,13 +20,13 @@
 			<li class="nav-item <?= $aktif == 'barang' ? 'active' : '' ?>">
 				<a class="nav-link" href="<?= base_url('barang') ?>">
 					<i class="fas fa-fw fa-box"></i>
-					<span>Master Barang</span></a>
+					<span>Barang</span></a>
 			</li>
 
-			<li class="nav-item <?= $aktif == 'kasir' ? 'active' : '' ?>">
-				<a class="nav-link" href="<?= base_url('kasir') ?>">
+			<li class="nav-item <?= $aktif == 'pembeli' ? 'active' : '' ?>">
+				<a class="nav-link" href="<?= base_url('pembeli') ?>">
 					<i class="fas fa-fw fa-cash-register"></i>
-					<span>Master Kasir</span></a>
+					<span>Pembeli</span></a>
 			</li>
 
 			<!-- Divider -->
@@ -42,6 +42,12 @@
 					<span>Transaksi Penjualan</span></a>
 			</li>
 
+			<li class="nav-item <?= $aktif == 'penjualan' ? 'active' : '' ?>">
+				<a class="nav-link" href="<?= base_url('home') ?>">
+					<i class="fas fa-fw fa-home"></i>
+					<span>Home</span></a>
+			</li>
+
 			<hr class="sidebar-divider">
 			<?php if ($this->session->login['role'] == 'admin'): ?>
 				<!-- Heading -->
@@ -55,11 +61,6 @@
 						<span>Manajemen Pengguna</span></a>
 				</li>
 
-				<li class="nav-item <?= $aktif == 'toko' ? 'active' : '' ?>">
-					<a class="nav-link" href="<?= base_url('toko') ?>">
-						<i class="fas fa-fw fa-building"></i>
-						<span>Profil Toko</span></a>
-				</li>
 				<!-- Divider -->
 				<hr class="sidebar-divider d-none d-md-block">
 			<?php endif; ?>
