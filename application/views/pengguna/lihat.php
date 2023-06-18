@@ -20,12 +20,12 @@
 						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
 					</div>
 					<div class="float-right">
-						<a href="<?= base_url('pengguna/export') ?>" class="btn btn-danger btn-sm"><i class="fa fa-file-pdf"></i>&nbsp;&nbsp;Export</a>
+						
 						<a href="<?= base_url('pengguna/tambah') ?>" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i>&nbsp;&nbsp;Tambah</a>
 					</div>
 				</div>
 				<hr>
-				<?php if ($this->session->flashdata('success')) : ?>
+				<!-- <?php if ($this->session->flashdata('success')) : ?>
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
 						<?= $this->session->flashdata('success') ?>
 						<button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -39,7 +39,7 @@
 							<span aria-hidden="true">&times;</span>
 						</button>
 					</div>
-				<?php endif ?>
+				<?php endif ?> -->
 				<div class="card shadow">
 					<div class="card-header"><strong>Daftar Pengguna</strong></div>
 					<div class="card-body">

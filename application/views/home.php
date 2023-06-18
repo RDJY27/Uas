@@ -16,11 +16,9 @@
 
 				<div class="container-fluid">
 				<div class="clearfix">
-					<div class="float-left">
-						<h1 class="h3 m-0 text-gray-800"><?= $title ?></h1>
-					</div>
+					
 				</div>
-				<hr>
+				
 				<?php if ($this->session->flashdata('success')) : ?>
 					<div class="alert alert-success alert-dismissible fade show" role="alert">
 						<?= $this->session->flashdata('success') ?>
@@ -166,7 +164,7 @@
                                 <p class="ingredients">
                                     (Green Tea + Jasmine + Blue Pea Flower)
                                 </p>
-                                <a href="<?php echo site_url('transaksi'); ?>" type="button"
+                                <a href="<?php echo site_url('penjualan'); ?>" type="button"
                                     class="btn btn-primary btn-lg">Rp149.000</a>
                             </div><!-- Menu Item -->
 
