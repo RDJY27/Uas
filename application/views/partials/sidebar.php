@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="main.css">
-
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 	<div class="sticky-top">
 		<a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('dashboard') ?>">
